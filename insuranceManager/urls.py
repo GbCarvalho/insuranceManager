@@ -15,8 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from insuranceManager.api import views as api_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/policies', api_views.policy_list),# Add login to browsable API
 ]
