@@ -16,12 +16,9 @@ class Policy(models.Model):
     
     def policy_id(self):
         return self.id
-    
+
     def policy_type(self):
         return self.type
-    
-    def policy_expiry_date(self):
-        return self.expiry_date
 
     class Meta:
         verbose_name_plural = 'Policies'
