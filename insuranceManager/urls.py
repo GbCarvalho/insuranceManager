@@ -21,4 +21,5 @@ from insuranceManager.api import views as api_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/policies', api_views.policy_list),# Add login to browsable API
+    path('api/policies/<uuid:pk>', api_views.policy_details),# Add login to browsable API
 ]
