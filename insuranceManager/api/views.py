@@ -12,5 +12,6 @@ from .serializer import PolicySerializer
 def policy_list(request):
     if request.method == 'GET':
         queryset = Policy.objects.all()
-        serializer_class = PolicySerializer
+        serializer = PolicySerializer(queryset, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer_class.data, status=status.HTTP_200_OK)
