@@ -5,7 +5,7 @@ from django.utils import timezone
 
 # Create your models here.
 def validate_past_date(value):
-    if value < timezone.now():
+    if value <= timezone.now():
         raise ValidationError('Expiry date cannot be in the past')
 
 class Policy(models.Model):
