@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Policy
 
 class PolicySerializer(serializers.ModelSerializer):
-    customer_name = serializers.CharField(source='customer.name')
+    customer_name = serializers.CharField()
     policy_id = serializers.UUIDField(source='id', read_only=True)
     policy_type = serializers.CharField(source='type')
     expiry_date = serializers.DateTimeField(format='%Y-%m-%d')
