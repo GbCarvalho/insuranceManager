@@ -5,7 +5,7 @@ class PolicySerializer(serializers.ModelSerializer):
     customer_name = serializers.CharField(source='customer.name')
     policy_id = serializers.UUIDField(source='id', read_only=True)
     policy_type = serializers.CharField(source='type')
-    expiry_date = serializers.DateTimeField(source='expiry_date')
+    expiry_date = serializers.DateTimeField(format='%Y-%m-%d')
     
     class Meta:
         model = Policy
