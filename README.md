@@ -100,6 +100,6 @@ The API returns appropriate HTTP status codes and error messages:
 - `500 Internal Server Error`: Server-side errors
 
 ## Details
-- Although the challenge instructed to do a policy_id and policy_type, I've chosen to add the database field as id and type and use the serializer to format to the required format.
+- Although the challenge instructed to do a `policy_id` and `policy_type`, I've chosen to add the database field as id and type and use the serializer to format to the required format.
 - Didn't add more models, like the model for Customer, to not increase the complexity of the challenge. Also didn't add authentication due to the same reason.
 - Although the challenge instructed to use Django ORM for validations, I tend to use the validations at the service layer and leave the ORM for the database operations.
